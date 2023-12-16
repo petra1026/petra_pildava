@@ -1,64 +1,127 @@
 <!DOCTYPE html>
 <html lang="lv">
+<head>
   <meta charset="utf-8">
-  <head>
-    <title>majaslapa</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    
-    <style>
-      #sakums {
-        padding-left: 70px;
-      }
+  <title>Mājaslapa</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <style>
+    #sakums {
+      padding-left: 70px;
+    }
 
-      body{
-        background-color: rgb(255, 151, 151);
-      }
+    body {
+      background-color: rgb(255, 151, 151);
+    }
+
+    .table-gap {
+      margin-bottom: 20px;
+    }
+
+    .center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      width: 60%;
+    }
+  </style>
+  <script>
+    function toggleSaturu() {
+      var originalaisSaturs = document.getElementById("OriginalaisSaturs");
+      var mainamaisSaturs = document.getElementById("MainamaisSaturs");
+      var pogaRadit = document.getElementById("PogaRadit");
+      var pogaPaslept = document.getElementById("PogaPaslept");
   
-      .table-gap {
-        margin-bottom: 20px; 
+      if (originalaisSaturs.style.display === "none") {
+        // OriginalaisSaturs is hidden, show MainamaisSaturs
+        originalaisSaturs.style.display = "block";
+        mainamaisSaturs.style.display = "none";
+        pogaRadit.style.display = "none";
+        pogaPaslept.style.display = "block";
+      } else {
+        // OriginalaisSaturs is visible, hide it and show MainamaisSaturs
+        originalaisSaturs.style.display = "none";
+        mainamaisSaturs.style.display = "block";
+        pogaRadit.style.display = "block";
+        pogaPaslept.style.display = "none";
       }
-
-      .center {
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        width: 60%;
-      }
-    </style>
+    }
+  </script>
+  
+  
 </head>
-<body>
-    <div class="text-bg-success p-3" style="background-color: #bb2626;">
-        <div class="container">
-            <div class="row p-3">
-                <div class="col">
-                    <h1 class="text-center">Rozes</h1>
-                </div>
-            </div>
-        </div>
-    </div> 
 
-    <div class="container">
-        <div class="row">
-    <p>
-        Roses are beautiful flowering plants that belong to the genus Rosa. They are known for their fragrant flowers and come in various colors and varieties.
-    </p>
+<body>
+  <div class="text-bg-success p-3 bg-dark">
+    <div class="container-fluid">
+      <div class="row p-3">
+        <div class="col">
+          <h1 class="text-center">Rozes</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <h6>Rozes ir skaisti ziedoši augi, kas pieder pie Rosa dzimtas. To zināmi pēc savām smaržīgajām ziediem un piedāvā dažādas krāsas un šķirnes.</h6>
+    </div>
+    <p></p>
+    <div class="row">
+      <div class="col">
+        <img src="https://images.photowall.com/products/45171/dark-red-rose.jpg?h=699&q=85" alt="Beautiful Rose" style="width: 80%; height: 80%;">
+      </div>
+      <div class="col">
+        <h2>Rozu šķirnes</h2>
+        <div id="OriginalaisSaturs" >
+          <ul>
+            <li><strong>Sarkanās rozes:</strong> Simbolizē mīlestību un romantiku.</li>
+            <li><strong>Baltās rozes:</strong> Pārstāv tīrību un nevainību.</li>
+            <li><strong>Rozās rozes:</strong> Pārraida iedegumu un pateicību.</li>
+            <li><strong>Dzeltēs rozes:</strong> Simbolizē draudzību un prieku.</li>
+            <li><strong>Oranžās rozes:</strong> Nozīmē entuziasmu un vēlmi.</li>
+          </ul>
+        </div>
+        <button id="PogaRadit" onclick="toggleSaturu()">Mainīt saturu</button>
+        <div id="MainamaisSaturs" style="display: none;">
+          <ul>
+            <li><strong>Hibrīdu tējas rozes:</strong> Pazīstamas ar lielām, augstu centra ziedlapiņām un gariem kātiem.</li>
+            <li><strong>Grandiflora rozes:</strong> Līdzīgas hibrīdu tējas rožu šķirnēm, bet ar ziedlapiņu klasteriem uz katru kātu.</li>
+            <li><strong>Floribunda rozes:</strong> Ražo ziedu klasterus un ir pazīstamas ar izturību.</li>
+            <li><strong>Kāpjošās rozes:</strong> Šīs rozes ir kāpjošas un var tikt izaudzētas uz struktūrām.</li>
+            <li><strong>Miniatūrās rozes:</strong> Mazi izmēra ziedi, kas ideāli piemēroti mazām dārzām vai traukiem.</li>
+          </ul>
+          <button id="PogaPaslept" onclick="toggleSaturu()">Mainīt saturu.</button>
+        </div>
+      </div>
     </div>
     <div class="row">
-        <div class="col">
-    <h2>Rose Varieties</h2>
-    <ul>
-        <li><strong>Red Roses:</strong> Symbolize love and romance.</li>
-        <li><strong>White Roses:</strong> Represent purity and innocence.</li>
-        <li><strong>Pink Roses:</strong> Convey admiration and gratitude.</li>
-        <li><strong>Yellow Roses:</strong> Symbolize friendship and joy.</li>
-        <li><strong>Orange Roses:</strong> Signify enthusiasm and desire.</li>
-    </ul>
-        </div>
-        <div class="col">
-            <img src="https://images.photowall.com/products/45171/dark-red-rose.jpg?h=699&q=85" alt="Beautiful Rose" style="width: 80%; height: 80%;">
-        </div>
+      <div class="col">
+        <p><b>Tabula 1. Locīšanas paradigma īpašības vārdiem ar nenoteikto galotni</b></p> 
+        <table style="border-collapse: collapse; border: 1px solid rgb(241, 237, 237);">
+          <tr>
+            <th style="background-color: rgb(2, 2, 2); border: 1px solid rgb(248, 246, 246); color: white;"><b>Nummurs</b></th>
+            <th style="background-color: rgb(2, 2, 2); border: 1px solid rgb(250, 246, 246); color: white;"><b>Populārākās rozes</b></th>
+          </tr>
+            <tr>
+              <td style="background-color: rgb(5, 5, 5); border: 1px solid rgb(252, 244, 244); color: white;">1.</td>
+              <td style="background-color: rgb(8, 8, 8); border: 1px solid rgb(252, 251, 251); color: white;">Double Delight Rose</td> 
+            </tr>
+            <tr>
+              <td style="background-color: rgb(5, 5, 5); border: 1px solid rgb(252, 244, 244); color: white;">2.</td>
+              <td style="background-color: rgb(8, 8, 8); border: 1px solid rgb(252, 251, 251); color: white;">Darcey Rose</td> 
+            </tr>
+            <tr>
+              <td style="background-color: rgb(5, 5, 5); border: 1px solid rgb(252, 244, 244); color: white;">3.</td>
+              <td style="background-color: rgb(8, 8, 8); border: 1px solid rgb(252, 251, 251); color: white;">Black Baccara Rose</td> 
+            </tr>
+        </table>
+      </div>
+      <div class="col">
+        <p>Links uz skolas mājaslapu :</p>
+        <a href="url">https://rag.lv</a>
+      </div>
     </div>
-    </div>
+  </div>
 </body>
 </html>
